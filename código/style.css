@@ -1,0 +1,430 @@
+* {
+    padding: 0 ;
+    margin:0 ;
+}
+body {
+    overflow-x: hidden; /* Evita que el contenido se desborde horizontalmente */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/*menú*/
+
+.BrandIcon{
+    cursor: pointer;
+}
+nav{
+    padding: 10px;
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+}
+nav ul{
+    display:flex;
+    list-style-type: none;
+    gap: 60px;
+}
+.menu-derecho{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+.menu-derecho a{
+    text-decoration: none;
+    color: #333333;
+}
+.menu-derecho a:hover{
+    color: #525151d2;
+}
+.menu-centro{
+    padding-top: 15px;
+    gap: 60px;
+    cursor: pointer;
+}
+.menu-items{
+    font-size: 13px;
+    color:#333333;
+    text-decoration: none; 
+}
+.menu-items:hover{ /*efecto al colocar cursor sobre las opciones del menu*/
+    text-decoration: underline;
+    font-weight: bold;
+} 
+
+/* Dropdown */
+
+.dropdown {
+    position: relative; /*posicionamiento respecto al padre. el que tiene position:absolute*/
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    background-color: rgba(230, 230, 230, 0.751);
+    border: #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none; 
+}
+.dropdown-menu li{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.dropdown-menu li:last-child { /*elimina la linea que se crea debajo del último elemento*/
+    border-bottom: none;
+}
+.dropdown-item {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+}
+.dropdown-item:hover {
+    background-color: #d8d8d8;
+    color: #000;
+    text-decoration: underline;
+}
+/* Mostrar el menú al pasar el cursor sobre MORE */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    transition: 0.10s;
+}
+
+/*popup*/
+
+.popup{
+    display: none;
+    width: 500px;
+    height: 250px;
+    margin: auto;
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #cccccc;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.close-btn{
+    position: absolute;
+    top:10px;
+    right:10px;
+    cursor:pointer;
+}
+.email-form button{
+    cursor: pointer;
+}
+
+/*hero*/
+
+h1{
+    color: white !important;
+    font-family: 'EB Garamond', serif;
+    padding-bottom: 20px;
+}
+nav img{
+    height: 50px;
+    width: 140px;
+}
+.hero{
+    width: 100%;
+    height: 400px;
+    background-image: url(../imagenes/imgPpal.jpg);
+}
+.hero-data{
+    width: 20%;
+    margin-left: 150px;
+    padding-top: 70px ;
+}
+.hero-data a:hover{
+    background-color: #f9f7f2;
+    color: #333333;
+}
+
+/*presentación*/
+
+.presentacion{
+    margin-top: 100px;
+    width: 100%;
+    align-items: center;
+}
+.presentacion_data{
+    width: 400px;
+    margin: auto;
+    text-align: center;
+}
+.nav-links{
+    text-decoration: none;
+    color: #333333;
+}
+.nav-links:hover{
+    text-decoration: underline;
+}
+
+/*carrusel*/
+
+.carrusel-intro{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+.carrusel-section{
+    position: relative;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.carrusel-container{
+    position: relative;
+    height: 450px;
+    width: 300px;
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.carrusel{
+    width: 600%;
+    height: 100%;
+    display: flex;
+}
+.slider-section {
+    width: 100%;
+    height: 100%;
+}
+img{
+    height: 300px;
+    width: 300px;
+}
+.slider-section-text{
+    width: 100%;
+    text-align: center;
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50% 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+}
+
+.btn-left:hover,
+.btn-right:hover { /*efecto al colocar cursor sobre las < o >*/
+    background-color: #333333d4;
+    color: #fff;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+/*formulario*/
+
+.info{
+    margin: auto;
+    width: 40%;
+    padding-top: 100px;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/*footer*/
+
+.footer{
+    background-color: #f9f7f2;
+}
+
+.footer_menu{
+    padding-top: 10px;
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.footer_menu ul{
+    display:flex;
+    list-style-type: none;
+    gap:60px;
+}
+
+.footer_menu img{
+    height: 50px;
+    width: 140px;
+}
+
+.footer_info{
+    padding-top: 10px;
+    display: flex;
+    justify-content:space-between ;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    padding-bottom: 15px;
+}
+
+.start{
+    padding-left: 120px;
+    
+}
+
+.end{
+    padding-right: 97px;
+}
+
+/*media-queries*/
+
+
+@media (max-width: 500px) { /*media queries mobile*/
+    .menu-centro {
+        display:none
+    }
+    .hero {
+        height: 300px;
+        width: 100%; 
+    }
+
+    .hero-data {
+        width: 90%; 
+        margin: auto; 
+        padding-top: 35px; 
+    }
+
+    .presentacion {
+        margin-top: 50px; 
+        width: 100%;
+    }
+    h1{
+        padding-bottom: 5px;
+    }
+    .presentacion_data {
+        width: 90%; 
+        margin: auto; 
+        text-align: center; 
+    }
+    .galeria{
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .galeriaRow {
+        width: 95%;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        padding-left: 30px;
+    }
+    
+    .galeria img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .footer_menu ul {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .footer_info {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .start, .end {
+        padding: 5px 0; 
+    }
+
+
+    form div {
+        width: 90%; 
+        margin: auto; 
+        max-width: 100vw;
+    }
+
+    .menu-derecho {
+        gap: 20px; 
+    }
+
+    .menu-derecho a {
+        font-size: 1.5rem; 
+    }
+    
+    .popup{
+        width: 300px;
+        height: 170px;
+    }
+    .popup h2 {
+        padding-top:15px ;
+        font-size: 1.5rem;
+    }
+
+    .popup p {
+        font-size: 1rem;
+    }
+
+    .email-form {
+        display: flex;
+        width: 100%;
+        gap: 10px; 
+    }
+    .email-form input {
+        width: 100%; 
+        margin: 0 auto; 
+    }
+
+    .email-form button {
+        flex: 1; 
+        width: 100%; 
+    }
+}
+@media (min-width:500px) and (max-width: 1164px) { /*media queries tablet*/
+    .menu-centro {
+        display:none
+    }
+    .hero{
+        width: 100%;
+        height: 400px;
+        width: 100vw;
+    }
+    .hero-data {
+        width: 50%;
+        margin: auto; 
+    }
+    .galeria .row {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+        max-width: 100%;
+        padding-left: 30px;
+    }
+
+    .galeria .col-4 {
+        flex: 0 0 30%; 
+        margin-bottom: 20px; 
+    }
+
+    .galeria img {
+        width: 100%; 
+        height: auto; 
+    }
+}
